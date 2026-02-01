@@ -98,7 +98,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8E0D0F292F2E74530032A94B /* Build configuration list for PBXProject "Concentration" */;
+			buildConfigurationList = 8E0D0F292F2E74530032A94B /* Build configuration list for PBXProject "Stanford Course 11" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -148,6 +148,7 @@
 				DEVELOPMENT_TEAM = 5AZ59LLP74;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Concentration/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Concentration;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -180,6 +181,7 @@
 				DEVELOPMENT_TEAM = 5AZ59LLP74;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Concentration/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Concentration;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -326,7 +328,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8E0D0F292F2E74530032A94B /* Build configuration list for PBXProject "Concentration" */ = {
+		8E0D0F292F2E74530032A94B /* Build configuration list for PBXProject "Stanford Course 11" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8E0D0F442F2E74540032A94B /* Debug */,
