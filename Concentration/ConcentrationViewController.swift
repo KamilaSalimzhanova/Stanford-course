@@ -8,7 +8,7 @@
 import UIKit
 
 class ConcentrationViewController: UIViewController {
-    var game = ConcentrationModel()
+    lazy var game = Concentration(numberOfPairsOfCards: (cardButtons.count + 1) / 2)
     
     private var titleLabel: UILabel = {
         let label = UILabel()
@@ -39,7 +39,8 @@ class ConcentrationViewController: UIViewController {
         }
     }
     private var cardButtons: [UIButton] = []
-    private let emojis = ["🎃", "🎃", "🙂", "🙂"]
+    private var emojiDictionary: [Int: String] = [:]
+    private var emojis = ["🌟", "🎃", "🏆", "🙂", "🤩", "🥸", "💪🏼", "🎄"]
     private let cardWidth: CGFloat = 120
     private let cardHeight: CGFloat = 160
     private let spacing: CGFloat = 20
@@ -139,7 +140,7 @@ private extension ConcentrationViewController {
     }
     
     private func setupCardsButtons() {
-        for index in 0..<emojis.count {
+        for index in 0..<4 {
             let button = UIButton(type: .system)
             button.tag = index
             
@@ -156,13 +157,8 @@ private extension ConcentrationViewController {
 private extension ConcentrationViewController {
     @objc private func touchCard(_ button: UIButton) {
         flipCount += 1
-        let index = button.tag
-        
-        if button.currentTitle == nil || button.currentTitle == "" {
-            showCard(button, emoji: emojis[index])
-        } else {
-            hideCard(button)
-        }
+        game.chooseCard(at: button.tag)
+        updateViewFromModel()
     }
     
     private func showCard(_ card: UIButton, emoji: String) {
@@ -170,8 +166,31 @@ private extension ConcentrationViewController {
         card.setTitle(emoji, for: .normal)
     }
     
-    private func hideCard(_ card: UIButton) {
-        card.backgroundColor = .orange
+    private func hideCard(_ card: UIButton, isMatched: Bool) {
+        card.backgroundColor = isMatched ? .clear : .orange
         card.setTitle("", for: .normal)
+    }
+}
+
+// MARK: - Delegate methods
+private extension ConcentrationViewController {
+    func updateViewFromModel() {
+        for index in cardButtons.indices {
+            let button = cardButtons[index]
+            let card = game[safe: index]
+            
+            if let card {
+                card.isFaceUp ? showCard(button, emoji: emoji(for: card)) : hideCard(button, isMatched: card.isMatched)
+            }
+        }
+    }
+    
+    private func emoji(for card: Card) -> String {
+        if emojiDictionary[card.identifier] == nil, emojis.count > 0 {
+            let randomUnix = Int(arc4random_uniform(UInt32(emojis.count)))
+            emojiDictionary[card.identifier] = emojis.remove(at: randomUnix)
+        }
+        
+        return emojiDictionary[card.identifier] ?? ""
     }
 }
