@@ -8,6 +8,7 @@
 
 /* Begin PBXFileReference section */
 		8E0D0F2E2F2E74530032A94B /* Concentration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Concentration.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E1049902F38CD45007D722E /* Playing Cards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Playing Cards.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -17,6 +18,13 @@
 				Info.plist,
 			);
 			target = 8E0D0F2D2F2E74530032A94B /* Concentration */;
+		};
+		8E1049A12F38CD46007D722E /* Exceptions for "Playing Cards" folder in "Playing Cards" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 8E10498F2F38CD45007D722E /* Playing Cards */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -29,10 +37,25 @@
 			path = Concentration;
 			sourceTree = "<group>";
 		};
+		8E1049912F38CD45007D722E /* Playing Cards */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				8E1049A12F38CD46007D722E /* Exceptions for "Playing Cards" folder in "Playing Cards" target */,
+			);
+			path = "Playing Cards";
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		8E0D0F2B2F2E74530032A94B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E10498D2F38CD45007D722E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -46,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				8E0D0F302F2E74530032A94B /* Concentration */,
+				8E1049912F38CD45007D722E /* Playing Cards */,
 				8E0D0F2F2F2E74530032A94B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				8E0D0F2E2F2E74530032A94B /* Concentration.app */,
+				8E1049902F38CD45007D722E /* Playing Cards.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -83,6 +108,28 @@
 			productReference = 8E0D0F2E2F2E74530032A94B /* Concentration.app */;
 			productType = "com.apple.product-type.application";
 		};
+		8E10498F2F38CD45007D722E /* Playing Cards */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8E1049A22F38CD46007D722E /* Build configuration list for PBXNativeTarget "Playing Cards" */;
+			buildPhases = (
+				8E10498C2F38CD45007D722E /* Sources */,
+				8E10498D2F38CD45007D722E /* Frameworks */,
+				8E10498E2F38CD45007D722E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				8E1049912F38CD45007D722E /* Playing Cards */,
+			);
+			name = "Playing Cards";
+			packageProductDependencies = (
+			);
+			productName = "Playing Cards";
+			productReference = 8E1049902F38CD45007D722E /* Playing Cards.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -94,6 +141,9 @@
 				LastUpgradeCheck = 2620;
 				TargetAttributes = {
 					8E0D0F2D2F2E74530032A94B = {
+						CreatedOnToolsVersion = 26.2;
+					};
+					8E10498F2F38CD45007D722E = {
 						CreatedOnToolsVersion = 26.2;
 					};
 				};
@@ -113,6 +163,7 @@
 			projectRoot = "";
 			targets = (
 				8E0D0F2D2F2E74530032A94B /* Concentration */,
+				8E10498F2F38CD45007D722E /* Playing Cards */,
 			);
 		};
 /* End PBXProject section */
@@ -125,10 +176,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8E10498E2F38CD45007D722E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8E0D0F2A2F2E74530032A94B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E10498C2F38CD45007D722E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -325,6 +390,70 @@
 			};
 			name = Release;
 		};
+		8E1049A32F38CD46007D722E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5AZ59LLP74;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Playing Cards/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "personal.kamila.ios.Playing-Cards";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8E1049A42F38CD46007D722E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5AZ59LLP74;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Playing Cards/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "personal.kamila.ios.Playing-Cards";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -342,6 +471,15 @@
 			buildConfigurations = (
 				8E0D0F422F2E74540032A94B /* Debug */,
 				8E0D0F432F2E74540032A94B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8E1049A22F38CD46007D722E /* Build configuration list for PBXNativeTarget "Playing Cards" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E1049A32F38CD46007D722E /* Debug */,
+				8E1049A42F38CD46007D722E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
